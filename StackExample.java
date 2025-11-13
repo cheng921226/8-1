@@ -1,14 +1,17 @@
+import java.util.Stack;
 
 class MyStack<T> {
-
+    private Stack<T> stack;  // 真正用來存東西的堆疊
     public MyStack() {
+        stack = new Stack<>();
     }
 
     public void push(T item) {
+        stack.push(item);
     }
 
     public T pop() {
-        return stack.top();
+        return stack.pop();
     }
 
     // 检查栈是否为空
@@ -22,10 +25,12 @@ class MyStack<T> {
     }
 }
 
-public class StackExample{
+public class StackExample {
     public static void main(String[] args) {
         MyStack<Integer> stack = new MyStack<>();
         //do some test if needed
+        stack.push(10);
+        stack.push(20);
     }
 }
 
